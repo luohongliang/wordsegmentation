@@ -1,0 +1,24 @@
+# -*- coding:UTF-8 -*-
+import os
+import mmseg
+
+dictionary = 'ouyang_dictionary.dic'
+f = open('13classes/仪礼/丧服第十一.txt')
+data = f.read()
+
+
+# reset_mmseg()
+mmseg.Dictionary.load_words(dictionary)
+
+
+tokenizer = mmseg.Algorithm(data)
+tokens_ouyang = []
+for token in tokenizer:
+    token = token.text.decode('utf-8-sig', errors='replace').replace(u'\x00', '')
+    if token:
+        tokens_ouyang.append(token)
+
+print 'using',dictionary,'has',len(tokens_ouyang),'words'
+for a in tokens_ouyang:
+    print a,
+print 'using',dictionary,'has',len(tokens_ouyang),'words'
