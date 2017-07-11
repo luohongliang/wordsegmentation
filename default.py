@@ -1,10 +1,9 @@
 # -*- coding:UTF-8 -*-
-
 import os
 import mmseg
 
 dictionary = 'modern words.dic'
-file = raw_input("Please input filename [default is 13classes/仪礼/丧服第十一.txt]:") or '13classes/仪礼/丧服第十一.txt'
+file = raw_input("Please input filename [default is corpus/13classes/仪礼/丧服第十一.txt]:") or 'corpus/13classes/仪礼/丧服第十一.txt'
 f = open(file)
 data = f.read()
 

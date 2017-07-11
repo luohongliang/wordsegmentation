@@ -13,9 +13,9 @@ sys.setdefaultencoding( "utf-8" )
 
 count = 0
 
-a = '/home/hongliang/inpho/wordsegmentation/ouyang dictionary.txt'
+a = '/home/hongliang/inpho/wordsegmentation/dicitonaries/ouyang_dictionary/Dictionary.txt'
 f = open(a,'r')
-fq = open('/home/hongliang/inpho/wordsegmentation/ouyang_dictionary.dic','w')
+fq = open('/home/hongliang/inpho/wordsegmentation/dicitonaries/ouyang_dictionary.dic','w')
 
 for word in f.readlines():
     word = word.strip().replace(u'\ufeff','')
